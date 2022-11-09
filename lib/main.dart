@@ -19,7 +19,6 @@ class MyApp extends StatelessWidget {
         home: MyHomePage(),
         routes: {
           '/HomePage': (context) => homePage(),
-          
         });
   }
 }
