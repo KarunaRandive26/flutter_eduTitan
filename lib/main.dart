@@ -2,9 +2,10 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_app_project/std_subjects.dart';
-import 'HomePage.dart';
+import 'Mainpage.dart';
 import 'login.dart';
 import 'std_subjects.dart';
+import 'HomePage.dart';
 import 'dart:async';
 
 void main() {
@@ -15,11 +16,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        home: MyHomePage(),
-        routes: {
-          '/HomePage': (context) => homePage(),
-        });
+      debugShowCheckedModeBanner: false,
+      home: MyHomePage(),
+    );
   }
 }
 
@@ -49,7 +48,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   route() {
     Navigator.pushReplacement(
-        context, MaterialPageRoute(builder: (context) => HomePage()));
+        context, MaterialPageRoute(builder: (context) => MainPage()));
   }
 
   initScreen(BuildContext context) {
@@ -63,7 +62,8 @@ class _MyHomePageState extends State<MyHomePage> {
             Color.fromARGB(255, 241, 173, 227),
             Color.fromARGB(255, 48, 22, 66),
           ],
-        )),
+        )
+        ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[

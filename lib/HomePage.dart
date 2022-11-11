@@ -1,29 +1,13 @@
 import 'package:flutter/material.dart';
-
 import './dummy_data.dart';
+import './models/subjects.dart';
 import './cat_standard.dart';
 
 class HomePage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: homePage(),
-    );
-  }
-}
-
-class homePage extends StatefulWidget {
-  @override
-  _homePageState createState() => _homePageState();
-}
-
-class _homePageState extends State<homePage> {
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          backgroundColor: Color.fromARGB(255, 223, 255, 118),
+          backgroundColor: Color.fromARGB(255, 255, 255, 255),
           elevation: 0.0,
           toolbarHeight: 90.0,
           title: Container(
@@ -50,7 +34,7 @@ class _homePageState extends State<homePage> {
                         shadows: [
                           Shadow(
                             blurRadius: 10.0,
-                            color: Color.fromARGB(255, 14, 114, 2),
+                            color: Color.fromARGB(255, 50, 50, 50),
                             offset: Offset(1.0, 1.0),
                           )
                         ]),
@@ -60,35 +44,49 @@ class _homePageState extends State<homePage> {
             ]),
           )),
       endDrawer: Drawer(
-        backgroundColor: Color.fromARGB(255, 159, 206, 89),
+        backgroundColor: Color.fromARGB(255, 255, 255, 255),
         child: ListView(children: [
           const UserAccountsDrawerHeader(
-              decoration:
-                  BoxDecoration(color: Color.fromARGB(255, 190, 225, 133)),
+              arrowColor: Color.fromARGB(255, 71, 71, 71),
+              decoration: BoxDecoration(
+                  boxShadow: [
+                    BoxShadow(
+                      color: Color.fromARGB(255, 158, 158, 158),
+                      offset: const Offset(
+                        2.0,
+                        2.0,
+                      ),
+                      blurRadius: 5.0,
+                      spreadRadius: 1.0,
+                    )
+                  ],
+                  color: Color.fromARGB(255, 229, 229, 229),
+                  borderRadius:
+                      BorderRadius.only(bottomRight: Radius.circular(40.0))),
               accountName: Text(
                 "Karuna",
                 style: TextStyle(
                     fontSize: 25.0,
                     fontWeight: FontWeight.bold,
-                    color: Color.fromARGB(255, 3, 112, 29)),
+                    color: Color.fromARGB(255, 2, 55, 14)),
               ),
               accountEmail: Text(
                 "karunarandive9@gmail.com",
                 style: TextStyle(
-                    fontSize: 15.0, color: Color.fromARGB(255, 3, 112, 29)),
+                    fontSize: 15.0, color: Color.fromARGB(255, 2, 55, 14)),
               ),
               currentAccountPicture: CircleAvatar(
                 backgroundImage: AssetImage('assets/images/girlprofile.jpg'),
               )),
           ListTile(
-            iconColor: Color.fromARGB(255, 3, 112, 29),
+            iconColor: Color.fromARGB(255, 2, 55, 14),
             leading: Icon(
               Icons.home,
             ),
             title: Text(
               'Profile',
               style: TextStyle(
-                color: Color.fromARGB(255, 3, 112, 29),
+                color: Color.fromARGB(255, 2, 55, 14),
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -97,14 +95,14 @@ class _homePageState extends State<homePage> {
             },
           ),
           ListTile(
-            iconColor: Color.fromARGB(255, 3, 112, 29),
+            iconColor: Color.fromARGB(255, 2, 55, 14),
             leading: Icon(
               Icons.help,
             ),
             title: Text(
               'Help Section',
               style: TextStyle(
-                color: Color.fromARGB(255, 3, 112, 29),
+                color: Color.fromARGB(255, 2, 55, 14),
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -113,14 +111,14 @@ class _homePageState extends State<homePage> {
             },
           ),
           ListTile(
-            iconColor: Color.fromARGB(255, 3, 112, 29),
+            iconColor: Color.fromARGB(255, 2, 55, 14),
             leading: Icon(
               Icons.star,
             ),
             title: Text(
               'Feedback',
               style: TextStyle(
-                color: Color.fromARGB(255, 3, 112, 29),
+                color: Color.fromARGB(255, 2, 55, 14),
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -129,14 +127,14 @@ class _homePageState extends State<homePage> {
             },
           ),
           ListTile(
-            iconColor: Color.fromARGB(255, 3, 112, 29),
+            iconColor: Color.fromARGB(255, 2, 55, 14),
             leading: Icon(
               Icons.logout,
             ),
             title: Text(
               'Log out',
               style: TextStyle(
-                color: Color.fromARGB(255, 3, 112, 29),
+                color: Color.fromARGB(255, 2, 55, 14),
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -231,6 +229,9 @@ class _homePageState extends State<homePage> {
                   catData.end,
                   catData.ImgPath)).toList(),
             ),
+            SizedBox(
+              height: 20.0,
+            )
           ])),
     );
   }
