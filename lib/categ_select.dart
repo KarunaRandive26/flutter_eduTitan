@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
+import './std_subjects.dart';
 
 class Categ_Item extends StatelessWidget {
   final String std_name;
   Categ_Item(this.std_name);
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => std_Subjects()));
+      },
       child: Container(
         padding: EdgeInsets.all(10.0),
         margin: EdgeInsets.all(MediaQuery.of(context).size.width * 0.02),

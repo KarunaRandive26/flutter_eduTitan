@@ -5,30 +5,76 @@ class std_Subjects extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-            backgroundColor: Color.fromARGB(255, 54, 207, 161),
-            elevation: 3.0,
-            toolbarHeight: 70.0,
-            title: Container(
-              child: Text(
-                'Subjects',
-                style: TextStyle(
-                  fontFamily: 'Rajdhani',
-                  fontSize: 30.0,
-                  fontWeight: FontWeight.w600,
-                  color: Colors.white,
-                ),
+          iconTheme: IconThemeData(
+            color: Colors.black87,
+          ),
+          backgroundColor: Colors.white,
+          elevation: 0.0,
+          title: Text(
+            'Subjects',
+            style: TextStyle(
+              shadows: [
+                Shadow(
+                  blurRadius: 10.0,
+                  color: Color.fromARGB(255, 141, 141, 141),
+                  offset: Offset(1.0, 1.0),
+                )
+              ],
+              fontFamily: 'Rajdhani',
+              fontSize: 30.0,
+              fontWeight: FontWeight.w600,
+              color: Colors.black87,
+            ),
+          ),
+        ),
+        body: Container(
+            margin: EdgeInsets.only(top: 10.0),
+            decoration: BoxDecoration(
+                boxShadow: [
+                  BoxShadow(
+                    color: Color.fromARGB(255, 158, 158, 158),
+                    offset: const Offset(
+                      2.0,
+                      2.0,
+                    ),
+                    blurRadius: 5.0,
+                    spreadRadius: 1.0,
+                  )
+                ],
+                color: Colors.white,
+                borderRadius: BorderRadius.only(
+                    topRight: Radius.circular(30.0),
+                    topLeft: Radius.circular(30.0))),
+            child: Column(children: <Widget>[
+              Container(
+                padding: EdgeInsets.only(left: 10.0, top: 25.0),
+                height: 100.0,
+                child: Align(
+                    alignment: Alignment.topLeft,
+                    child: Text(
+                      'Select Subjects',
+                      style: TextStyle(
+                        shadows: [
+                          Shadow(
+                            blurRadius: 10.0,
+                            color: Color.fromARGB(255, 193, 193, 193),
+                            offset: Offset(1.0, 1.0),
+                          )
+                        ],
+                        fontFamily: 'Rajdhani',
+                        fontSize: 25.0,
+                        fontWeight: FontWeight.w600,
+                        color: Colors.black87,
+                      ),
+                    )),
               ),
-            )),
-        body: SingleChildScrollView(
-            scrollDirection: Axis.vertical,
-            child: Center(
-              child: Column(
+              Column(
                 children: <Widget>[
-                  Subject_Names('Trees', 'assets/images/Trees.jpg'),
-                  Subject_Names('Animals', 'assets/images/Animals.jpg'),
-                  Subject_Names('Birds', 'assets/images/birds.png')
+                  Subject_Names('Trees'),
+                  Subject_Names('Animals'),
+                  Subject_Names('Birds'),
                 ],
               ),
-            )));
+            ])));
   }
 }

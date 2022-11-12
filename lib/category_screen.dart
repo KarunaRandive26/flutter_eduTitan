@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app_project/upcoming.dart';
 import './categ_select.dart';
 import 'package:flutter_carousel_widget/flutter_carousel_widget.dart';
 
@@ -44,6 +45,43 @@ class Category_Screen extends StatelessWidget {
                     Categ_Item('4th'),
                   ],
                 )),
+            SizedBox(
+              height: 20.0,
+            ),
+            Align(
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'Upcomings',
+                style: TextStyle(
+                    color: Colors.black87,
+                    fontFamily: 'Rajdhani',
+                    fontWeight: FontWeight.w600,
+                    fontSize: 20.0),
+              ),
+            ),
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: <Widget>[
+                  Upcoming(),
+                  Upcoming(),
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 20.0,
+            ),
+            Align(
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'Most Viewed',
+                style: TextStyle(
+                    color: Colors.black87,
+                    fontFamily: 'Rajdhani',
+                    fontWeight: FontWeight.w600,
+                    fontSize: 20.0),
+              ),
+            ),
           ],
         ),
       ),
