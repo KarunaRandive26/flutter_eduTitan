@@ -5,7 +5,6 @@ import 'package:flutter_app_project/category_screen.dart';
 import 'package:flutter_app_project/std_subjects.dart';
 import 'package:flutter_app_project/subject_items_Screen.dart';
 import 'homepage.dart';
-import 'nav_item.dart';
 
 class MainPage extends StatelessWidget {
   @override

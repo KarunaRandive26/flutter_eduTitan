@@ -13,9 +13,8 @@ class Subject_Items extends StatelessWidget {
       },
       child: Container(
         padding: EdgeInsets.all(10.0),
-        margin: EdgeInsets.all(MediaQuery.of(context).size.width * 0.02),
-        width: MediaQuery.of(context).size.width * 0.45,
-        height: MediaQuery.of(context).size.width * 0.45,
+        width: MediaQuery.of(context).size.width * 0.2,
+        height: MediaQuery.of(context).size.width * 0.2,
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(5.0),
             boxShadow: [
