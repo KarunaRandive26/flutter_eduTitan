@@ -39,10 +39,10 @@ class Category_Screen extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: <Widget>[
-                    Categ_Item('1st'),
-                    Categ_Item('2nd'),
-                    Categ_Item('3rd'),
-                    Categ_Item('4th'),
+                    Categ_Item('1st', 'assets/images/1st.png'),
+                    Categ_Item('2nd', 'assets/images/2nd.png'),
+                    Categ_Item('3rd', 'assets/images/1st.png'),
+                    Categ_Item('4th', 'assets/images/2nd.png'),
                   ],
                 )),
             SizedBox(

@@ -40,6 +40,7 @@ dependencies:
   flutter_carousel_widget: ^1.0.5
   circles_background: ^0.0.2
   auto_animated: ^3.0.1
+  speech_to_text: ^5.6.1
 
 dev_dependencies:
   flutter_test:
@@ -73,6 +74,8 @@ flutter:
      - assets/images/Animals.jpg
      - assets/images/birds.png
      - assets/images/pine.webp
+     - assets/images/1st.png
+     - assets/images/2nd.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

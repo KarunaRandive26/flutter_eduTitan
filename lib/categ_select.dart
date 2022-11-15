@@ -3,7 +3,8 @@ import './std_subjects.dart';
 
 class Categ_Item extends StatelessWidget {
   final String std_name;
-  Categ_Item(this.std_name);
+  final String assetName;
+  Categ_Item(this.std_name, this.assetName);
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
@@ -30,14 +31,8 @@ class Categ_Item extends StatelessWidget {
                 spreadRadius: 1.0,
               )
             ],
-            gradient: LinearGradient(
-              begin: Alignment.topRight,
-              end: Alignment.bottomLeft,
-              colors: [
-                Color.fromARGB(255, 241, 173, 227),
-                Color.fromARGB(255, 48, 22, 66),
-              ],
-            )),
+            image: DecorationImage(
+                image: AssetImage(assetName), fit: BoxFit.cover)),
         child: Align(
           alignment: AlignmentDirectional.bottomCenter,
           child: Text(
