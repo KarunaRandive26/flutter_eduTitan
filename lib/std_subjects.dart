@@ -28,6 +28,7 @@ class std_Subjects extends StatelessWidget {
           ),
         ),
         body: Container(
+            height: double.maxFinite,
             margin: EdgeInsets.only(top: 10.0),
             decoration: BoxDecoration(
                 boxShadow: [

@@ -41,6 +41,9 @@ dependencies:
   circles_background: ^0.0.2
   auto_animated: ^3.0.1
   speech_to_text: ^5.6.1
+  flutter_staggered_animations: ^1.0.0
+  lottie: ^1.4.2
+  animated_text_kit: ^4.2.1
 
 dev_dependencies:
   flutter_test:
@@ -76,6 +79,18 @@ flutter:
      - assets/images/pine.webp
      - assets/images/1st.png
      - assets/images/2nd.png
+     - assets/images/2std.png
+     - assets/images/3rd.png
+     - assets/images/4th.png
+     - assets/images/1grade.png
+     - assets/images/std1.png
+     - assets/images/std2.png
+     - assets/images/std3.png
+     - assets/images/std4.png
+     - assets/images/entry.gif
+     - assets/images/welcome.json
+     
+     
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -96,7 +111,10 @@ flutter:
         - asset: assets/fonts/Rajdhani-Light.ttf
         - asset: assets/fonts/Rajdhani-Medium.ttf
         - asset: assets/fonts/Rajdhani-Regular.ttf
-        - asset: assets/fonts/Rajdhani-SemiBold.ttf
+        - asset: assets/fonts/Rajdhani-SemiBold.ttf 
+    - family: Edushare
+      fonts:
+        - asset: assets/fonts/Edushare-8M5pg.otf
                 
   #
   # For details regarding fonts from package dependencies,

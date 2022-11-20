@@ -7,6 +7,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+          iconTheme: IconThemeData(color: Color.fromARGB(255, 75, 75, 75)),
           backgroundColor: Color.fromARGB(255, 255, 255, 255),
           elevation: 0.0,
           toolbarHeight: 90.0,
@@ -43,7 +44,7 @@ class HomePage extends StatelessWidget {
               )
             ]),
           )),
-      endDrawer: Drawer(
+      drawer: Drawer(
         backgroundColor: Color.fromARGB(255, 255, 255, 255),
         child: ListView(children: [
           const UserAccountsDrawerHeader(
@@ -146,93 +147,98 @@ class HomePage extends StatelessWidget {
       ),
       body: SingleChildScrollView(
           scrollDirection: Axis.vertical,
-          child:
-              Column(crossAxisAlignment: CrossAxisAlignment.start, children: <
-                  Widget>[
-            Container(
-              color: Colors.white,
-              height: 200.0,
-              child: Column(
+          child: Container(
+            color: Colors.white,
+            child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  Row(
-                    children: <Widget>[
-                      Container(
-                        width: 200.0,
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
+                  Container(
+                    color: Colors.white,
+                    height: 200.0,
+                    child: Column(
+                      children: <Widget>[
+                        Row(
                           children: <Widget>[
-                            Padding(padding: EdgeInsets.only(left: 15.0)),
-                            Stack(
-                              children: <Widget>[
-                                Container(
-                                    child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: <Widget>[
-                                    Padding(
-                                        padding:
-                                            EdgeInsets.fromLTRB(0, 0, 0, 30)),
-                                    Text('Explore,',
-                                        style: TextStyle(
-                                            fontSize: 20,
-                                            color: Color.fromARGB(
-                                                255, 67, 18, 85))),
-                                    Text('Enjoy,',
-                                        style: TextStyle(
-                                          fontSize: 25,
-                                        )),
-                                    Text('and Learn',
-                                        style: TextStyle(
-                                          fontSize: 30,
-                                        ))
-                                  ],
-                                ))
-                              ],
+                            Container(
+                              width: 200.0,
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: <Widget>[
+                                  Padding(padding: EdgeInsets.only(left: 15.0)),
+                                  Stack(
+                                    children: <Widget>[
+                                      Container(
+                                          child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: <Widget>[
+                                          Padding(
+                                              padding: EdgeInsets.fromLTRB(
+                                                  0, 0, 0, 30)),
+                                          Text('Explore,',
+                                              style: TextStyle(
+                                                  fontSize: 20,
+                                                  color: Color.fromARGB(
+                                                      255, 67, 18, 85))),
+                                          Text('Enjoy,',
+                                              style: TextStyle(
+                                                fontSize: 25,
+                                              )),
+                                          Text('and Learn',
+                                              style: TextStyle(
+                                                fontSize: 30,
+                                              ))
+                                        ],
+                                      ))
+                                    ],
+                                  )
+                                ],
+                              ),
+                            ),
+                            Expanded(
+                              child: Container(
+                                padding: EdgeInsets.only(right: 30.0),
+                                height: 200.0,
+                                width: 200.0,
+                                decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                        image: AssetImage(
+                                            'assets/images/study.webp'),
+                                        fit: BoxFit.cover)),
+                              ),
                             )
                           ],
-                        ),
+                        )
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    height: 15.0,
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(left: 10.0),
+                    child: Text(
+                      'Categories',
+                      style: TextStyle(
+                        fontSize: 25.0,
+                        fontWeight: FontWeight.bold,
+                        color: Color.fromARGB(255, 31, 42, 132),
                       ),
-                      Expanded(
-                        child: Container(
-                          padding: EdgeInsets.only(right: 30.0),
-                          height: 200.0,
-                          width: 200.0,
-                          decoration: BoxDecoration(
-                              image: DecorationImage(
-                                  image: AssetImage('assets/images/study.webp'),
-                                  fit: BoxFit.cover)),
-                        ),
-                      )
-                    ],
+                      textAlign: TextAlign.start,
+                    ),
+                  ),
+                  Column(
+                    children: Dummy_Categories.map((catData) => Category_std(
+                        catData.stdno,
+                        catData.start,
+                        catData.end,
+                        catData.ImgPath)).toList(),
+                  ),
+                  SizedBox(
+                    height: 20.0,
                   )
-                ],
-              ),
-            ),
-            SizedBox(
-              height: 15.0,
-            ),
-            Padding(
-              padding: EdgeInsets.only(left: 10.0),
-              child: Text(
-                'Categories',
-                style: TextStyle(
-                  fontSize: 25.0,
-                  fontWeight: FontWeight.bold,
-                  color: Color.fromARGB(255, 31, 42, 132),
-                ),
-                textAlign: TextAlign.start,
-              ),
-            ),
-            Column(
-              children: Dummy_Categories.map((catData) => Category_std(
-                  catData.stdno,
-                  catData.start,
-                  catData.end,
-                  catData.ImgPath)).toList(),
-            ),
-            SizedBox(
-              height: 20.0,
-            )
-          ])),
+                ]),
+          )),
     );
   }
 }

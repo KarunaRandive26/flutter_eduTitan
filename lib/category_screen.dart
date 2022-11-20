@@ -18,7 +18,9 @@ class Category_Screen extends StatelessWidget {
                 fontSize: 25.0),
           )),
       body: Container(
-        margin: EdgeInsets.all(MediaQuery.of(context).size.width * 0.02),
+        padding: EdgeInsets.only(
+            top: MediaQuery.of(context).size.width * 0.02,
+            left: MediaQuery.of(context).size.width * 0.02),
         color: Colors.white,
         alignment: Alignment.centerLeft,
         child: Column(
@@ -39,10 +41,10 @@ class Category_Screen extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: <Widget>[
-                    Categ_Item('1st', 'assets/images/1st.png'),
-                    Categ_Item('2nd', 'assets/images/2nd.png'),
-                    Categ_Item('3rd', 'assets/images/1st.png'),
-                    Categ_Item('4th', 'assets/images/2nd.png'),
+                    Categ_Item('assets/images/std1.png'),
+                    Categ_Item('assets/images/std2.png'),
+                    Categ_Item('assets/images/std3.png'),
+                    Categ_Item('assets/images/std4.png'),
                   ],
                 )),
             SizedBox(

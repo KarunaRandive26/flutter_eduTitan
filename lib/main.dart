@@ -7,6 +7,8 @@ import 'login.dart';
 import 'std_subjects.dart';
 import 'HomePage.dart';
 import 'dart:async';
+import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:lottie/lottie.dart';
 
 void main() {
   runApp(MyApp());
@@ -42,7 +44,7 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   startTime() async {
-    var duration = new Duration(seconds: 4);
+    var duration = new Duration(seconds: 10);
     return new Timer(duration, route);
   }
 
@@ -62,39 +64,36 @@ class _MyHomePageState extends State<MyHomePage> {
             Color.fromARGB(255, 241, 173, 227),
             Color.fromARGB(255, 48, 22, 66),
           ],
-        )
-        ),
+        )),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                Text(
-                  'Welcome',
-                  style: TextStyle(
-                      fontFamily: 'Montserrat',
-                      fontSize: 50.0,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white),
-                ),
-                Text(
-                  'To',
-                  style: TextStyle(
-                    fontFamily: 'Montserrat',
-                    fontSize: 50.0,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
+                Container(
+                  child: Lottie.asset(
+                    'assets/images/welcome.json',
+                    width: MediaQuery.of(context).size.width * 0.8,
+                    height: MediaQuery.of(context).size.width * 0.8,
+                    fit: BoxFit.fill,
                   ),
                 ),
-                Text(
-                  'EduTitans',
-                  style: TextStyle(
-                      fontFamily: 'Montserrat',
-                      fontSize: 50.0,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white),
-                ),
+                Container(
+                  height: 100.0,
+                  alignment: Alignment.center,
+                  child: DefaultTextStyle(
+                    style: const TextStyle(
+                      fontSize: 60.0,
+                      fontFamily: 'Edushare',
+                    ),
+                    child: AnimatedTextKit(
+                      animatedTexts: [
+                        ScaleAnimatedText('EduTitans'),
+                      ],
+                    ),
+                  ),
+                )
               ],
             )
           ],

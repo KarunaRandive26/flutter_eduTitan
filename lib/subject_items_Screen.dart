@@ -1,14 +1,57 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_project/std_subjects.dart';
 import './subject_items.dart';
+import 'item_List.dart';
+import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 
 class Subject_Items_Screen extends StatelessWidget {
+  final List<String> imgpath = [
+    'assets/images/pine.webp',
+    'assets/images/pine.webp',
+    'assets/images/pine.webp',
+    'assets/images/pine.webp',
+    'assets/images/pine.webp',
+    'assets/images/pine.webp',
+    'assets/images/pine.webp',
+    'assets/images/pine.webp',
+    'assets/images/pine.webp',
+    'assets/images/pine.webp',
+    'assets/images/pine.webp',
+    'assets/images/pine.webp',
+    'assets/images/pine.webp',
+    'assets/images/pine.webp',
+    'assets/images/pine.webp',
+    'assets/images/pine.webp',
+  ];
+  final List<String> item_name = [
+    'Pine',
+    'Pine',
+    'Pine',
+    'Pine',
+    'Pine',
+    'Pine',
+    'Pine',
+    'Pine',
+    'Pine',
+    'Pine',
+    'Pine',
+    'Pine',
+    'Pine',
+    'Pine',
+    'Pine',
+    'Pine'
+  ];
   Widget build(BuildContext context) {
     return Scaffold(
-        body: SingleChildScrollView(
-      child: Column(
-        children: <Widget>[
-          Container(
+        appBar: AppBar(
+          elevation: 0.0,
+          centerTitle: true,
+          titleSpacing: 0,
+          automaticallyImplyLeading: false,
+          toolbarHeight: MediaQuery.of(context).size.height * 0.3,
+          backgroundColor: Colors.white,
+          title: Container(
+            margin: EdgeInsets.only(bottom: 10.0),
             height: MediaQuery.of(context).size.height * 0.3,
             decoration: BoxDecoration(
                 color: Color.fromARGB(255, 129, 223, 251),
@@ -33,7 +76,7 @@ class Subject_Items_Screen extends StatelessWidget {
                     height: 200,
                     width: 200,
                     decoration: BoxDecoration(
-                        color: Color.fromARGB(163, 179, 235, 252),
+                        color: Color.fromARGB(162, 169, 221, 237),
                         borderRadius: BorderRadius.circular(200)),
                   ),
                 ),
@@ -41,7 +84,7 @@ class Subject_Items_Screen extends StatelessWidget {
                   height: 250,
                   width: 250,
                   decoration: BoxDecoration(
-                      color: Color.fromARGB(86, 157, 205, 240),
+                      color: Color.fromARGB(84, 151, 200, 235),
                       borderRadius:
                           BorderRadius.only(bottomRight: Radius.circular(250))),
                 ),
@@ -51,7 +94,7 @@ class Subject_Items_Screen extends StatelessWidget {
                     height: 200,
                     width: 200,
                     decoration: BoxDecoration(
-                        color: Color.fromARGB(144, 101, 190, 217),
+                        color: Color.fromARGB(144, 108, 204, 233),
                         borderRadius:
                             BorderRadius.only(topRight: Radius.circular(250))),
                   ),
@@ -73,7 +116,7 @@ class Subject_Items_Screen extends StatelessWidget {
                           icon: Icon(
                             Icons.arrow_back_sharp,
                             size: 35,
-                            color: Colors.black,
+                            color: Colors.white,
                           ),
                           onPressed: () {
                             Navigator.pop(
@@ -88,7 +131,7 @@ class Subject_Items_Screen extends StatelessWidget {
                             'Subject-Name',
                             style: TextStyle(
                                 fontSize: 40,
-                                color: Colors.white70,
+                                color: Colors.white,
                                 fontFamily: 'Rajdhani',
                                 fontWeight: FontWeight.w600,
                                 shadows: [
@@ -106,7 +149,7 @@ class Subject_Items_Screen extends StatelessWidget {
                           padding: EdgeInsets.only(left: 5.0),
                           child: Text('Search For items',
                               style: TextStyle(
-                                  fontSize: 35.0,
+                                  fontSize: 27.0,
                                   fontFamily: 'Rajdhani',
                                   fontWeight: FontWeight.w500,
                                   color: Colors.white,
@@ -122,9 +165,28 @@ class Subject_Items_Screen extends StatelessWidget {
                     ))
               ],
             ),
-          )
-        ],
-      ),
-    ));
+          ),
+        ),
+        body: Container(
+          padding: EdgeInsets.only(right: 5.0, left: 5.0, top: 10.0),
+          child: GridView(
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 3,
+                crossAxisSpacing: 10,
+                mainAxisSpacing: 10,
+              ),
+              scrollDirection: Axis.vertical,
+              children: List.generate(imgpath.length, (index) {
+                return AnimationConfiguration.staggeredGrid(
+                    position: index,
+                    columnCount: 3,
+                    child: ScaleAnimation(
+                        duration: Duration(milliseconds: 2000),
+                        child: FadeInAnimation(
+                          child:
+                              Subject_Items(imgpath[index], item_name[index]),
+                        )));
+              })),
+        ));
   }
 }

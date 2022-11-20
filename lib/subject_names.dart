@@ -19,11 +19,11 @@ class Subject_Names extends StatelessWidget {
           margin: EdgeInsets.only(
               left: MediaQuery.of(context).size.width * 0.02,
               right: MediaQuery.of(context).size.width * 0.02,
-              bottom: 30.0),
+              bottom: 20.0),
           width: MediaQuery.of(context).size.width * 0.9,
           height: MediaQuery.of(context).size.width * 0.3,
           decoration: BoxDecoration(
-            color: Color.fromARGB(255, 119, 119, 151),
+            color: Color.fromARGB(255, 133, 96, 152),
             borderRadius: BorderRadius.only(
                 topRight: Radius.circular(20.0),
                 bottomLeft: Radius.circular(20.0)),
