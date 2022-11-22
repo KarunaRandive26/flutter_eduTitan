@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 import './view_item_screen.dart';
+import './saved.dart';
 
 class Subject_Items extends StatelessWidget {
   final String Img_Path;
   final String subject_Item_name;
+
   Subject_Items(this.Img_Path, this.subject_Item_name);
+
+  Color _iconColor = Colors.white;
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
@@ -56,11 +60,19 @@ class Subject_Items extends StatelessWidget {
               ),
             ),
             Align(
-                alignment: Alignment.topRight,
-                child: Icon(
+              alignment: Alignment.topRight,
+              child: IconButton(
+                onPressed: (() {
+                  _iconColor = Colors.red;
+                  saved_imgpath.add(Img_Path);
+                  saved_item_name.add(subject_Item_name);
+                }),
+                icon: Icon(
                   Icons.bookmark,
-                  color: Colors.white,
-                ))
+                  color: _iconColor,
+                ),
+              ),
+            )
           ])),
     );
   }
