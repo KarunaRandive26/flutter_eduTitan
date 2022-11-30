@@ -24,6 +24,7 @@ class std_Subjects extends StatelessWidget {
               fontSize: 30.0,
               fontWeight: FontWeight.w600,
               color: Colors.black87,
+              
             ),
           ),
         ),

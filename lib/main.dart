@@ -44,7 +44,7 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   startTime() async {
-    var duration = new Duration(seconds: 10);
+    var duration = new Duration(seconds: 6);
     return new Timer(duration, route);
   }
 
@@ -58,11 +58,12 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Container(
         decoration: BoxDecoration(
             gradient: LinearGradient(
-          begin: Alignment.topRight,
-          end: Alignment.bottomLeft,
+          begin: Alignment.topCenter,
+          
+          end: Alignment.bottomCenter,
           colors: [
-            Color.fromARGB(255, 241, 173, 227),
-            Color.fromARGB(255, 48, 22, 66),
+            Color.fromARGB(255, 212, 144, 204),
+            Color.fromARGB(255, 33, 3, 44),
           ],
         )),
         child: Row(

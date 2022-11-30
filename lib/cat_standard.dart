@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app_project/std_subjects.dart';
 
 class Category_std extends StatelessWidget {
-  final String stdno;
+  final String cat_name;
   final Color start;
   final Color end;
   final String ImgPath;
 
-  Category_std(this.stdno, this.start, this.end, this.ImgPath);
+  Category_std(this.cat_name, this.start, this.end, this.ImgPath);
 
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -27,25 +27,25 @@ class Category_std extends StatelessWidget {
         child: Row(children: <Widget>[
           Container(
             margin: EdgeInsets.only(left: 20.0),
-            width: MediaQuery.of(context).size.width * 0.6,
+            width: MediaQuery.of(context).size.width * 0.5,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Text(
-                  'Standard',
-                  style: TextStyle(color: Colors.white, fontSize: 25.0),
-                ),
-                Text(
-                  stdno,
-                  style: TextStyle(color: Colors.white, fontSize: 30.0),
+                  cat_name,
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 30.0,
+                  ),
                 ),
               ],
             ),
           ),
           Align(
+            alignment: Alignment.centerRight,
             child: Container(
-                width: MediaQuery.of(context).size.width * 0.25,
+                width: MediaQuery.of(context).size.width * 0.3,
                 margin: EdgeInsets.only(top: 5.0, bottom: 5.0),
                 decoration: BoxDecoration(
                     image: DecorationImage(

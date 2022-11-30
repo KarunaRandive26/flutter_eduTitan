@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import './dummy_data.dart';
 import './models/subjects.dart';
 import './cat_standard.dart';
+import './category_screen.dart';
 
 class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
@@ -229,14 +230,28 @@ class HomePage extends StatelessWidget {
                   ),
                   Column(
                     children: Dummy_Categories.map((catData) => Category_std(
-                        catData.stdno,
+                        catData.cat_name,
                         catData.start,
                         catData.end,
                         catData.ImgPath)).toList(),
                   ),
                   SizedBox(
                     height: 20.0,
-                  )
+                  ),
+                  Align(
+                      alignment: Alignment.centerRight,
+                      child: TextButton(
+                        child: Text(
+                          'more',
+                          style: TextStyle(color: Colors.blue),
+                        ),
+                        onPressed: (() {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Category_Screen()));
+                        }),
+                      ))
                 ]),
           )),
     );

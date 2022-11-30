@@ -5,15 +5,15 @@ import './models/subjects.dart';
 
 const Dummy_Categories = const [
   Category(
-      stdno: '1',
+      cat_name: 'Alphabets',
       start: Color.fromARGB(255, 12, 177, 34),
       end: Colors.yellow,
-      ImgPath: 'assets/images/girlprofile.webp'),
+      ImgPath: 'assets/images/alphabet.png'),
   Category(
-      stdno: '2',
+      cat_name: 'Numbers',
       start: Color.fromARGB(255, 12, 37, 177),
       end: Color.fromARGB(255, 241, 119, 194),
-      ImgPath: 'assets/images/girlprofile.webp'),
+      ImgPath: 'assets/images/numbers.png'),
 ];
 
 const Dummy_subjects = const [

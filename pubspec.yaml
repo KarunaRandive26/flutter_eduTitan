@@ -89,6 +89,9 @@ flutter:
      - assets/images/std4.png
      - assets/images/entry.gif
      - assets/images/welcome.json
+     - assets/images/alphabet.png
+     - assets/images/animal.png
+     - assets/images/numbers.png
      
      
 

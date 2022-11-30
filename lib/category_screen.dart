@@ -7,6 +7,9 @@ class Category_Screen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+          iconTheme: IconThemeData(
+            color: Colors.black87,
+          ),
           elevation: 0.0,
           backgroundColor: Colors.white,
           title: Text(
