@@ -44,6 +44,7 @@ dependencies:
   flutter_staggered_animations: ^1.0.0
   lottie: ^1.4.2
   animated_text_kit: ^4.2.1
+  scroll_shadow_container: ^2.1.1
 
 dev_dependencies:
   flutter_test:
@@ -90,7 +91,7 @@ flutter:
      - assets/images/entry.gif
      - assets/images/welcome.json
      - assets/images/alphabet.png
-     - assets/images/Animals.jpg
+     - assets/images/animal.png
      - assets/images/numbers.png
      
      

@@ -42,6 +42,7 @@ class Subject_Items_Screen extends StatelessWidget {
     'Pine',
     'Pine'
   ];
+  final ScrollController _scrollController = ScrollController();
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
@@ -170,24 +171,29 @@ class Subject_Items_Screen extends StatelessWidget {
         ),
         body: Container(
           padding: EdgeInsets.only(right: 5.0, left: 5.0, top: 10.0),
-          child: GridView(
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 3,
-                crossAxisSpacing: 10,
-                mainAxisSpacing: 10,
-              ),
-              scrollDirection: Axis.vertical,
-              children: List.generate(imgpath.length, (index) {
-                return AnimationConfiguration.staggeredGrid(
-                    position: index,
-                    columnCount: 3,
-                    child: ScaleAnimation(
-                        duration: Duration(milliseconds: 2000),
-                        child: FadeInAnimation(
-                          child:
-                              Subject_Items(imgpath[index], item_name[index]),
-                        )));
-              })),
+          child: Scrollbar(
+            isAlwaysShown: true,
+            controller: _scrollController,
+            child: GridView(
+                controller: _scrollController,
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 3,
+                  crossAxisSpacing: 10,
+                  mainAxisSpacing: 10,
+                ),
+                scrollDirection: Axis.vertical,
+                children: List.generate(imgpath.length, (index) {
+                  return AnimationConfiguration.staggeredGrid(
+                      position: index,
+                      columnCount: 3,
+                      child: ScaleAnimation(
+                          duration: Duration(milliseconds: 2000),
+                          child: FadeInAnimation(
+                            child:
+                                Subject_Items(imgpath[index], item_name[index]),
+                          )));
+                })),
+          ),
         ));
   }
 }

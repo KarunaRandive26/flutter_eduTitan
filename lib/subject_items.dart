@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import './view_item_screen.dart';
 import './saved.dart';
 
+
 class Subject_Items extends StatelessWidget {
   final String Img_Path;
   final String subject_Item_name;
@@ -11,6 +12,7 @@ class Subject_Items extends StatelessWidget {
   Color _iconColor = Colors.white;
   Widget build(BuildContext context) {
     return GestureDetector(
+      behavior: HitTestBehavior.opaque,
       onTap: () {
         Navigator.push(context,
             MaterialPageRoute(builder: (context) => View_Item_Screen()));

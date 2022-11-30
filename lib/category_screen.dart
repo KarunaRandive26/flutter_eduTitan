@@ -46,7 +46,7 @@ class Category_Screen extends StatelessWidget {
                   children: <Widget>[
                     Categ_Item('assets/images/alphabet.png', 'Alphabets'),
                     Categ_Item('assets/images/numbers.png', 'Numbers'),
-                    Categ_Item('assets/images/Animals.jpg', 'Animals'),
+                    Categ_Item('assets/images/animal.png', 'Animals'),
                   ],
                 )),
             SizedBox(
