@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_project/std_subjects.dart';
+import './subject_items_Screen.dart';
 
 class Category_std extends StatelessWidget {
   final String cat_name;
@@ -12,8 +12,8 @@ class Category_std extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => std_Subjects()));
+        Navigator.push(context,
+            MaterialPageRoute(builder: (context) => Subject_Items_Screen()));
       },
       child: Container(
         margin: EdgeInsets.only(left: 10.0, right: 10.0, top: 10.0),
