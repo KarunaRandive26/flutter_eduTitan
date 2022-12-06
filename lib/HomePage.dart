@@ -3,6 +3,7 @@ import './dummy_data.dart';
 import './models/subjects.dart';
 import './cat_standard.dart';
 import './category_screen.dart';
+import 'package:lottie/lottie.dart';
 
 class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
@@ -251,7 +252,13 @@ class HomePage extends StatelessWidget {
                               MaterialPageRoute(
                                   builder: (context) => Category_Screen()));
                         }),
-                      ))
+                      )),
+                  Container(
+                    child: Lottie.asset(
+                      'assets/images/home-bg.json',
+                      fit: BoxFit.contain,
+                    ),
+                  ),
                 ]),
           )),
     );
