@@ -204,8 +204,8 @@ class HomePage extends StatelessWidget {
                                 decoration: BoxDecoration(
                                     image: DecorationImage(
                                         image: AssetImage(
-                                            'assets/images/study.webp'),
-                                        fit: BoxFit.cover)),
+                                            'assets/images/study.png'),
+                                        fit: BoxFit.fitWidth)),
                               ),
                             )
                           ],

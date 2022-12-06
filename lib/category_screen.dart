@@ -75,17 +75,6 @@ class Category_Screen extends StatelessWidget {
             SizedBox(
               height: 20.0,
             ),
-            Align(
-              alignment: Alignment.centerLeft,
-              child: Text(
-                'Most Viewed',
-                style: TextStyle(
-                    color: Colors.black87,
-                    fontFamily: 'Rajdhani',
-                    fontWeight: FontWeight.w600,
-                    fontSize: 20.0),
-              ),
-            ),
           ],
         ),
       ),
