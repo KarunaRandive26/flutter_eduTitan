@@ -26,8 +26,8 @@ class Categ_Item extends StatelessWidget {
                   begin: Alignment.topRight,
                   end: Alignment.bottomLeft,
                   colors: [
-                    Color.fromARGB(255, 132, 126, 253),
-                    Color.fromARGB(255, 247, 224, 243),
+                    Color.fromARGB(255, 8, 38, 138),
+                    Color.fromARGB(255, 247, 150, 252),
                   ],
                 ),
                 borderRadius: BorderRadius.only(

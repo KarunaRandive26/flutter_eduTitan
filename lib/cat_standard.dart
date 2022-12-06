@@ -27,7 +27,7 @@ class Category_std extends StatelessWidget {
         child: Row(children: <Widget>[
           Container(
             margin: EdgeInsets.only(left: 20.0),
-            width: MediaQuery.of(context).size.width * 0.5,
+            width: MediaQuery.of(context).size.width * 0.45,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -45,7 +45,7 @@ class Category_std extends StatelessWidget {
           Align(
             alignment: Alignment.centerRight,
             child: Container(
-                width: MediaQuery.of(context).size.width * 0.3,
+                width: MediaQuery.of(context).size.width * 0.4,
                 margin: EdgeInsets.only(top: 5.0, bottom: 5.0),
                 decoration: BoxDecoration(
                     image: DecorationImage(

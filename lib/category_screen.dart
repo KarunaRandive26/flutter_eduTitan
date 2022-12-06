@@ -44,8 +44,8 @@ class Category_Screen extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: <Widget>[
-                    Categ_Item('assets/images/alphabet.png', 'Alphabets'),
-                    Categ_Item('assets/images/numbers.png', 'Numbers'),
+                    Categ_Item('assets/images/emotion.png', 'Emotions'),
+                    Categ_Item('assets/images/colors.png', 'Colors'),
                     Categ_Item('assets/images/animal.png', 'Animals'),
                   ],
                 )),

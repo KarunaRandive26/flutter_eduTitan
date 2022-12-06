@@ -7,40 +7,34 @@ import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 
 class Subject_Items_Screen extends StatelessWidget {
   final List<String> imgpath = [
-    'assets/images/pine.webp',
-    'assets/images/pine.webp',
-    'assets/images/pine.webp',
-    'assets/images/pine.webp',
-    'assets/images/pine.webp',
-    'assets/images/pine.webp',
-    'assets/images/pine.webp',
-    'assets/images/pine.webp',
-    'assets/images/pine.webp',
-    'assets/images/pine.webp',
-    'assets/images/pine.webp',
-    'assets/images/pine.webp',
-    'assets/images/pine.webp',
-    'assets/images/pine.webp',
-    'assets/images/pine.webp',
-    'assets/images/pine.webp',
+    'assets/images/happyface.jpg',
+    'assets/images/laughing.jpg',
+    'assets/images/thinking.jpg',
+    'assets/images/surprise.jpg',
+    'assets/images/yawning.jpg',
+    'assets/images/sad.jpg',
+    'assets/images/shock.jpg',
+    'assets/images/suspicious.jpg',
+    'assets/images/angry.jpg',
+    'assets/images/crying.jpg',
+    'assets/images/cunning.jpg',
+    'assets/images/frightened.jpg',
+    'assets/images/jealous.jpg'
   ];
   final List<String> item_name = [
-    'Pine',
-    'Pine',
-    'Pine',
-    'Pine',
-    'Pine',
-    'Pine',
-    'Pine',
-    'Pine',
-    'Pine',
-    'Pine',
-    'Pine',
-    'Pine',
-    'Pine',
-    'Pine',
-    'Pine',
-    'Pine'
+    'Happy',
+    'Laughing',
+    'Thinking',
+    'Surprise',
+    'Yawning',
+    'Sad',
+    'Shock',
+    'Suspicious',
+    'Angry',
+    'Crying',
+    'Cunning',
+    'Frightened',
+    'Jealous'
   ];
   Widget build(BuildContext context) {
     return Scaffold(
@@ -172,16 +166,15 @@ class Subject_Items_Screen extends StatelessWidget {
           padding: EdgeInsets.only(right: 5.0, left: 5.0, top: 10.0),
           child: GridView(
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 3,
-                crossAxisSpacing: 10,
-                mainAxisSpacing: 10,
+                crossAxisCount: 2,
+                crossAxisSpacing: 5,
+                mainAxisSpacing: 5,
               ),
               scrollDirection: Axis.vertical,
               children: List.generate(imgpath.length, (index) {
-                
                 return AnimationConfiguration.staggeredGrid(
                     position: index,
-                    columnCount: 3,
+                    columnCount: 2,
                     child: ScaleAnimation(
                         duration: Duration(milliseconds: 2000),
                         child: FadeInAnimation(
