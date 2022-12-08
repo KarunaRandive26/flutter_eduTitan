@@ -1,6 +1,7 @@
 import 'package:curved_labeled_navigation_bar/curved_navigation_bar.dart';
 import 'package:curved_labeled_navigation_bar/curved_navigation_bar_item.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_app_project/Profile.dart';
 import 'package:flutter_app_project/category_screen.dart';
 import 'package:flutter_app_project/saved.dart';
 import 'package:flutter_app_project/subject_items_Screen.dart';
@@ -28,7 +29,7 @@ class _mainPageState extends State<mainPage> {
     HomePage(),
     Category_Screen(),
     Saved_items(),
-    Subject_Items_Screen()
+    Profile()
   ];
   Widget build(BuildContext context) {
     return Scaffold(
@@ -78,7 +79,7 @@ class _mainPageState extends State<mainPage> {
               Icons.account_circle,
               color: Colors.white,
             ),
-            label: 'Dashboard',
+            label: 'Profile',
           ),
         ],
         onTap: (index) => setState(() => _selectedIndex = index),

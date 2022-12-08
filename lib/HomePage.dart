@@ -10,7 +10,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
           iconTheme: IconThemeData(color: Color.fromARGB(255, 75, 75, 75)),
-          backgroundColor: Color.fromARGB(255, 255, 255, 255),
+          backgroundColor: Color.fromARGB(255, 166, 235, 228),
           elevation: 0.0,
           toolbarHeight: 90.0,
           title: Container(
@@ -155,61 +155,33 @@ class HomePage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Container(
-                    color: Colors.white,
-                    height: 200.0,
-                    child: Column(
+                    child: Stack(
                       children: <Widget>[
-                        Row(
-                          children: <Widget>[
-                            Container(
-                              width: 200.0,
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                children: <Widget>[
-                                  Padding(padding: EdgeInsets.only(left: 15.0)),
-                                  Stack(
-                                    children: <Widget>[
-                                      Container(
-                                          child: Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: <Widget>[
-                                          Padding(
-                                              padding: EdgeInsets.fromLTRB(
-                                                  0, 0, 0, 30)),
-                                          Text('Explore,',
-                                              style: TextStyle(
-                                                  fontSize: 20,
-                                                  color: Color.fromARGB(
-                                                      255, 67, 18, 85))),
-                                          Text('Enjoy,',
-                                              style: TextStyle(
-                                                fontSize: 25,
-                                              )),
-                                          Text('and Learn',
-                                              style: TextStyle(
-                                                fontSize: 30,
-                                              ))
-                                        ],
-                                      ))
-                                    ],
-                                  )
-                                ],
-                              ),
-                            ),
-                            Expanded(
-                              child: Container(
-                                padding: EdgeInsets.only(right: 30.0),
-                                height: 200.0,
-                                width: 200.0,
-                                decoration: BoxDecoration(
-                                    image: DecorationImage(
-                                        image: AssetImage(
-                                            'assets/images/study.png'),
-                                        fit: BoxFit.fitWidth)),
-                              ),
-                            )
-                          ],
+                        Container(
+                          child: Lottie.asset(
+                            'assets/images/home-bg2.json',
+                            fit: BoxFit.contain,
+                          ),
+                        ),
+                        Container(
+                          child: Lottie.asset(
+                            'assets/images/home-bg.json',
+                            fit: BoxFit.contain,
+                          ),
+                        ),
+                        Positioned(
+                          bottom: 0,
+                          left: 0,
+                          child: Container(
+                            padding: EdgeInsets.only(right: 30.0),
+                            height: 200.0,
+                            width: 200.0,
+                            decoration: BoxDecoration(
+                                image: DecorationImage(
+                                    image:
+                                        AssetImage('assets/images/study.png'),
+                                    fit: BoxFit.fitWidth)),
+                          ),
                         )
                       ],
                     ),

@@ -1,11 +1,5 @@
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
-import 'package:flutter_app_project/std_subjects.dart';
 import 'Mainpage.dart';
-import 'login.dart';
-import 'std_subjects.dart';
-import 'HomePage.dart';
 import 'dart:async';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:lottie/lottie.dart';
@@ -59,7 +53,6 @@ class _MyHomePageState extends State<MyHomePage> {
         decoration: BoxDecoration(
             gradient: LinearGradient(
           begin: Alignment.topCenter,
-          
           end: Alignment.bottomCenter,
           colors: [
             Color.fromARGB(255, 212, 144, 204),

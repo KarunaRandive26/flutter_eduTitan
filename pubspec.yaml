@@ -92,6 +92,8 @@ flutter:
      - assets/images/entry.gif
      - assets/images/welcome.json
      - assets/images/home-bg.json
+     - assets/images/home-bg2.json
+     - assets/images/bghome.json
      - assets/images/blast.json
      - assets/images/alphabet.png
      - assets/images/animal.png
