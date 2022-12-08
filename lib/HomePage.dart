@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app_project/Profile.dart';
 import './dummy_data.dart';
 import './models/subjects.dart';
 import './cat_standard.dart';
@@ -9,43 +10,24 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          iconTheme: IconThemeData(color: Color.fromARGB(255, 75, 75, 75)),
-          backgroundColor: Color.fromARGB(255, 166, 235, 228),
-          elevation: 0.0,
-          toolbarHeight: 90.0,
-          title: Container(
-            child: Column(children: <Widget>[
-              Row(
-                children: <Widget>[
-                  Container(
-                    height: 75.0,
-                    width: 75.0,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(37.5),
-                      image: DecorationImage(
-                          image: AssetImage('assets/images/girlprofile.jpg'),
-                          fit: BoxFit.cover),
-                    ),
-                  ),
-                  SizedBox(width: 10.0),
-                  Container(
-                      child: Text(
-                    'Hello, Karuna',
-                    style: TextStyle(
-                        fontSize: 20.0,
-                        fontWeight: FontWeight.bold,
-                        shadows: [
-                          Shadow(
-                            blurRadius: 10.0,
-                            color: Color.fromARGB(255, 50, 50, 50),
-                            offset: Offset(1.0, 1.0),
-                          )
-                        ]),
-                  ))
-                ],
-              )
-            ]),
-          )),
+        iconTheme: IconThemeData(color: Color.fromARGB(255, 75, 75, 75)),
+        backgroundColor: Color.fromARGB(255, 166, 235, 228),
+        elevation: 3.0,
+        toolbarHeight: 80.0,
+        title: Align(
+          alignment: Alignment.centerRight,
+          child: Container(
+            height: 75.0,
+            width: 75.0,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(37.5),
+              image: DecorationImage(
+                  image: AssetImage('assets/images/girlprofile.jpg'),
+                  fit: BoxFit.cover),
+            ),
+          ),
+        ),
+      ),
       drawer: Drawer(
         backgroundColor: Color.fromARGB(255, 255, 255, 255),
         child: ListView(children: [
@@ -67,14 +49,14 @@ class HomePage extends StatelessWidget {
                   borderRadius:
                       BorderRadius.only(bottomRight: Radius.circular(40.0))),
               accountName: Text(
-                "Karuna",
+                "Arial",
                 style: TextStyle(
                     fontSize: 25.0,
                     fontWeight: FontWeight.bold,
                     color: Color.fromARGB(255, 2, 55, 14)),
               ),
               accountEmail: Text(
-                "karunarandive9@gmail.com",
+                "arial9@gmail.com",
                 style: TextStyle(
                     fontSize: 15.0, color: Color.fromARGB(255, 2, 55, 14)),
               ),
@@ -94,7 +76,8 @@ class HomePage extends StatelessWidget {
               ),
             ),
             onTap: () {
-              Navigator.pop(context);
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => Profile()));
             },
           ),
           ListTile(
@@ -225,12 +208,6 @@ class HomePage extends StatelessWidget {
                                   builder: (context) => Category_Screen()));
                         }),
                       )),
-                  Container(
-                    child: Lottie.asset(
-                      'assets/images/home-bg.json',
-                      fit: BoxFit.contain,
-                    ),
-                  ),
                 ]),
           )),
     );
