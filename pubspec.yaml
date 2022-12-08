@@ -89,6 +89,7 @@ flutter:
      - assets/images/std2.png
      - assets/images/std3.png
      - assets/images/std4.png
+     - assets/images/std4.png
      - assets/images/entry.gif
      - assets/images/welcome.json
      - assets/images/home-bg.json

@@ -36,6 +36,17 @@ class Profile extends StatelessWidget {
                       height: 100,
                       width: 100,
                       decoration: BoxDecoration(
+                          boxShadow: [
+                            BoxShadow(
+                              color: Color.fromARGB(255, 212, 212, 212),
+                              offset: const Offset(
+                                2.0,
+                                2.0,
+                              ),
+                              blurRadius: 5.0,
+                              spreadRadius: 1.0,
+                            )
+                          ],
                           color: Colors.teal[200],
                           image: DecorationImage(
                               image:
@@ -47,9 +58,9 @@ class Profile extends StatelessWidget {
                 ],
               ),
             ),
-            Profile_data('name', 'name'),
-            Profile_data('mail', 'mail'),
-            Profile_data('grade', 'grade'),
+            Profile_data('Name:', 'Gaurav'),
+            Profile_data('Mail:', 'Gaurav@wmg.com'),
+            Profile_data('Phone Number:', '9325885022'),
           ],
         ),
       ),
