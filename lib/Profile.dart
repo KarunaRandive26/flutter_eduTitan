@@ -18,19 +18,19 @@ class Profile extends StatelessWidget {
                     ),
                   ),
                   Positioned(
-                      bottom: 0,
-                      left: MediaQuery.of(context).size.width * 0.35,
-                      child: Container(
-                        height: 100,
-                        width: 100,
-                        decoration: BoxDecoration(
-                            color: Colors.teal[200],
-                            image: DecorationImage(
-                                    image:
-                                        AssetImage('assets/images/study.png'),
-                                    fit: BoxFit.fitWidth)),
-                            ),
-                      ))
+                    bottom: 0,
+                    left: MediaQuery.of(context).size.width * 0.35,
+                    child: Container(
+                      height: 100,
+                      width: 100,
+                      decoration: BoxDecoration(
+                          color: Colors.teal[200],
+                          image: DecorationImage(
+                              image: AssetImage('assets/images/study.png'),
+                              fit: BoxFit.fitWidth),
+                          borderRadius: BorderRadius.circular(100.0)),
+                    ),
+                  )
                 ],
               ),
             )
